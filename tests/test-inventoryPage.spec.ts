@@ -63,15 +63,13 @@ test.describe('Inventory Page', () => {
 
     test('Invetory page should have ShoppingCart visible', async ({inventoryPage}) => {
         await inventoryPage.goto();
-        const shoppingCartVisible = await inventoryPage.shoppingCard.isVisible();
-        await expect(shoppingCartVisible).toBeVisible();
+        await expect(inventoryPage.shoppingCard).toBeVisible();
     });   
 
 
     test('Invetory page should have Product Sort visible', async ({inventoryPage}) => {
         await inventoryPage.goto();
-        const shoppingCartVisible = await inventoryPage.productSortContainer.isVisible();
-        await expect(shoppingCartVisible).toBeVisible();
+        await expect(inventoryPage.productSortContainer).toBeVisible();
     });   
 
     test('Should select "Name (Z to A)" in Product Sort', async ({inventoryPage}) => {

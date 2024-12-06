@@ -7,7 +7,6 @@ test.describe('Cart Page', () => {
         const header = await cartPage.primaryHeaderLabel.innerText();
         await expect(cartPage.primaryHeaderLabel).toBeVisible();
         expect(header.trim()).toEqual('Swag Labs');
-        await inventoryPage.page.screenshot({path:'shots1/screenshot.png'});
     });
 
     test('Cart page should have "Continue Shopping" button', async ({inventoryPage, cartPage}) => {
