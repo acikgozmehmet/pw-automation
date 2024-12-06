@@ -3,7 +3,7 @@ on: [push]
 jobs:
   test-e2e:
     name: Run E2E tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Test Results
-          path: test-results
+          path: ${{ github.workspace }}/test-results
