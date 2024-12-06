@@ -1,5 +1,4 @@
 import { Page, Locator } from 'playwright';
-import { BrowserUtility } from '../utilities/browser-utility';
 
 /**
  * BasePage class represents common functionality for all page objects
@@ -55,15 +54,4 @@ export class BasePage {
   //   await this.page.waitForTimeout(600);
   // }
   
-  /**
-   * Waits for a specified amount of time.
-   *
-   * @async
-   * @param {number} millisec - The number of milliseconds to wait.
-   * @returns {Promise<void>} A promise that resolves after the specified timeout.
-   * @throws {Error} If the page object is not initialized or if the waitForTimeout method fails.
-   */  
-  async waitForTimeout(millisec: number): Promise<void> {
-    await this.page.waitForTimeout(millisec);
-  }
 }

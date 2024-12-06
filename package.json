@@ -6,15 +6,22 @@
     "test": "npx playwright test",
     "test:tag": "npx playwright test --grep @tag",
     "test:ui": "npx playwright test --ui",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "eslint": "npx eslint ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.10.1",
-    "dotenv": "^16.4.5"
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.16.0",
+    "eslint-plugin-playwright": "^2.1.0"
   }
 }
