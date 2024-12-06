@@ -5,6 +5,6 @@ node_modules/
 /playwright/.cache/
 
 #custom
-.env
+#.env
 .auth
 Notes
