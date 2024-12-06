@@ -52,9 +52,5 @@ export class BrowserUtility {
       throw new Error(`Element is not visible: ${locator}`);
     }
   }
-
-  static async screenshot({page}): Promise<void> {
-    await page.screenshot({ path: `screenshot-${new Date().toISOString().replace(/:/g, '-')}.png` });
-  }
   
 }
