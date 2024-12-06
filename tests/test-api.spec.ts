@@ -11,7 +11,7 @@ test('API GET test example', async ({ apiTest }) => {
     const responseBodyJson = await response.json();
     const responseBody = await response.text();
     console.log(`${responseBody}`)
-    console.log(responseBodyJson.data.id)
+    expect(responseBodyJson.data.id).toBe(2)
 });
 
 test('API POST test example', async ({ apiTest }) => {
@@ -25,7 +25,7 @@ test('API POST test example', async ({ apiTest }) => {
     const responseBodyJson = await response.json();
     const responseBody = await response.text();
     console.log(`${responseBody}`)
-    console.log(responseBodyJson.id)
+    expect(responseBodyJson.id).toBe(1000)
 });
 
 test('API PUT test example', async ({ apiTest }) => {
@@ -42,14 +42,10 @@ test('API PUT test example', async ({ apiTest }) => {
     const responseBodyJson = await response.json();
     const responseBody = await response.text();
     console.log(`${responseBody}`)
-    console.log(responseBodyJson.name)
+    expect(responseBodyJson.name).toEqual('John');
 });
 
 test('API DELETE test example', async ({ apiTest }) => {
-    const data = { 
-                name: 'John',
-                job: 'Developer' 
-                }
     const headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

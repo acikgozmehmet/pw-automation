@@ -1,4 +1,4 @@
-import { APIRequestContext, expect } from '@playwright/test';
+import { APIRequestContext, APIResponse, expect } from '@playwright/test';
 
 export class APITester {
   private request: APIRequestContext;
@@ -33,11 +33,11 @@ export class APITester {
     return response;
   }
 
-  async validateResponseStatus(response: any, expectedStatus: number) {
+  async validateResponseStatus(response: APIResponse, expectedStatus: number) {
     expect(response.status()).toBe(expectedStatus);
   }
 
-  async validateResponseBody(response: any, expectedBody: object) {
+  async validateResponseBody(response: APIResponse, expectedBody: object) {
     const responseBody = await response.json();
     expect(responseBody).toEqual(expectedBody);
   }
