@@ -69,6 +69,29 @@ To run specific test suites:
 npx playwright test:tag --headed
 ```
 
+To Build the Docker image:
+Make sure to have Docker running before executing the following
+
+```bash
+docker build -t pw-automation .
+```
+
+To create the container and run the tests
+
+```bash
+docker run -it pw-automation
+
+xvfb-run npx playwright test
+or
+xvfb-run npx playwright test tests/\*.spec.ts
+```
+
+To run tests with docker-compose
+
+```bash
+docker-compose up --build
+```
+
 ## Configuration
 
 Modify `playwright.config.ts` to adjust browser settings, timeouts, and other Playwright-specific configurations.
