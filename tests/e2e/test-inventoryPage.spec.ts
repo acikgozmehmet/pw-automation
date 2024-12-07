@@ -1,6 +1,6 @@
-import {test, expect} from '../utilities/custom-fixtures';
+import {test, expect} from '../../utilities/custom-fixtures';
 
-test.describe('Inventory Page', () => {
+test.describe('Inventory Page @e2e', () => {
     test('Inventory page should have "Swag Labs" as header', async ({inventoryPage}) => {
         await inventoryPage.goto();
         const header = await inventoryPage.primaryHeaderLabel.innerText();

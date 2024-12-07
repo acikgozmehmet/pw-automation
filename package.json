@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --headed",
-    "test:tag": "npx playwright test --grep @tag",
+    "test:tag": "npx playwright test --headed --grep @e2e",
     "test:ui": "npx playwright test --ui",
     "report": "npx playwright show-report",
     "eslint": "npx eslint ./"
