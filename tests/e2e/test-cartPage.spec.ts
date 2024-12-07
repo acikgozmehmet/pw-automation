@@ -1,6 +1,6 @@
-import {test, expect} from '../utilities/custom-fixtures';
+import {test, expect} from '../../utilities/custom-fixtures';
 
-test.describe('Cart Page', () => {
+test.describe('Cart Page @e2e', () => {
     test('Cart page should have "Swag Labs" as header', async ({inventoryPage, cartPage}) => {
         await inventoryPage.goto();
         await cartPage.goto();
