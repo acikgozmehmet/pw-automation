@@ -1,0 +1,24 @@
+{
+  "workbench.colorTheme": "Visual Studio Dark",
+  "security.workspace.trust.untrustedFiles": "open",
+  "playwright.reuseBrowser": false,
+  "files.autoSave": "afterDelay",
+  "playwright.showTrace": false,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "editor.mouseWheelZoom": true,
+  "git.enableSmartCommit": true,
+  "editor.fontSize": 20,
+  "window.zoomLevel": 1,
+  "code-runner.clearPreviousOutput": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "tabnine.experimentalAutoImports": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+
+
+}
